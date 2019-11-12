@@ -325,7 +325,7 @@ describe('DateTimeComponent', () => {
       expect(component.hour).toBe(+LOCAL_HOUR);
       expect(component.minute).toBe(LOCAL_MIN);
       expect(component.amPmVal).toBe(LOCAL_AMPM);
-      expect(component.isCurrent()).toBe(false);
+      expect(component.isCurrent).toBe(false);
 
       component.apply();
       expect(component.displayValue).toEqual(`${LOCAL_DATE} ${LOCAL_TIME}`);
@@ -340,7 +340,7 @@ describe('DateTimeComponent', () => {
       expect(component.hour).toBe(+LOCAL_HOUR);
       expect(component.minute).toBe('22');
       expect(component.amPmVal).toBe(LOCAL_AMPM);
-      expect(component.isCurrent()).toBe(false);
+      expect(component.isCurrent).toBe(false);
 
       component.apply();
       expect(component.displayValue).toEqual(`${LOCAL_DATE} ${LOCAL_HOUR}:22 ${LOCAL_AMPM}`);
@@ -355,7 +355,7 @@ describe('DateTimeComponent', () => {
       expect(component.hour).toBe(11);
       expect(component.minute).toBe(LOCAL_MIN);
       expect(component.amPmVal).toBe(LOCAL_AMPM);
-      expect(component.isCurrent()).toBe(false);
+      expect(component.isCurrent).toBe(false);
 
       component.apply();
       expect(component.displayValue).toEqual(`${LOCAL_DATE} 11:${LOCAL_MIN} ${LOCAL_AMPM}`);
@@ -372,7 +372,7 @@ describe('DateTimeComponent', () => {
       expect(component.hour).toBe(+LOCAL_HOUR);
       expect(component.minute).toBe(LOCAL_MIN);
       expect(component.amPmVal).toBe(newLocalAMPM);
-      expect(component.isCurrent()).toBe(false);
+      expect(component.isCurrent).toBe(false);
 
       component.apply();
       expect(component.displayValue).toEqual(`${LOCAL_DATE} ${LOCAL_HOUR}:${LOCAL_MIN} ${newLocalAMPM}`);
@@ -387,7 +387,7 @@ describe('DateTimeComponent', () => {
       expect(component.hour).toBe(12);
       expect(component.minute).toBe(LOCAL_MIN);
       expect(component.amPmVal).toBe(LOCAL_AMPM);
-      expect(component.isCurrent()).toBe(false);
+      expect(component.isCurrent).toBe(false);
 
       component.apply();
       expect(component.displayValue).toEqual(`${LOCAL_DATE} 12:${LOCAL_MIN} ${LOCAL_AMPM}`);
@@ -405,7 +405,7 @@ describe('DateTimeComponent', () => {
       expect(component.hour).toBe(12);
       expect(component.minute).toBe(LOCAL_MIN);
       expect(component.amPmVal).toBe('AM');
-      expect(component.isCurrent()).toBe(false);
+      expect(component.isCurrent).toBe(false);
 
       component.apply();
       expect(component.displayValue).toEqual(`${LOCAL_DATE} 12:${LOCAL_MIN} AM`);
@@ -420,7 +420,7 @@ describe('DateTimeComponent', () => {
       expect(component.hour).toBe(12);
       expect(component.minute).toBe('39');
       expect(component.amPmVal).toBe('PM');
-      expect(component.isCurrent()).toBe(false);
+      expect(component.isCurrent).toBe(false);
 
       component.apply();
       expect(component.displayValue).toEqual(`01/01/1990 12:39 PM`);
@@ -431,7 +431,7 @@ describe('DateTimeComponent', () => {
       expect(moment.isMoment(component.dialogModel)).toBeTruthy();
 
       component.selectCurrent();
-      expect(component.isCurrent()).toBe(true);
+      expect(component.isCurrent).toBe(true);
     });
 
     it('should clear', () => {

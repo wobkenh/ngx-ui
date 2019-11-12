@@ -10,35 +10,16 @@ import {
   Output,
   ViewEncapsulation,
   Renderer2,
-  TemplateRef
+  TemplateRef,
+  ChangeDetectionStrategy
 } from '@angular/core';
 
 @Component({
   selector: 'ngx-dialog',
-  encapsulation: ViewEncapsulation.None,
+  templateUrl: './dialog.component.html',
   styleUrls: ['./dialog.component.scss'],
-  template: `
-    <div [class]="class" [class.ngx-dialog]="true" [style.zIndex]="zIndex">
-      <div
-        class="ngx-dialog-content {{ cssClass }}"
-        [@visibilityTransition]="visibleState"
-        [style.zIndex]="contentzIndex"
-        tabindex="-1"
-        role="dialog"
-      >
-        <button *ngIf="closeButton" type="button" class="close" (click)="hide()">
-          <span class="icon-x"></span>
-        </button>
-        <div class="ngx-dialog-header" *ngIf="dialogTitle">
-          <h2 *ngIf="dialogTitle" class="ngx-dialog-title" [innerHTML]="dialogTitle"></h2>
-        </div>
-        <ng-template *ngIf="template" [ngTemplateOutlet]="template" [ngTemplateOutletContext]="{ context: context }">
-        </ng-template>
-        <div *ngIf="content" [innerHTML]="content"></div>
-        <ng-content></ng-content>
-      </div>
-    </div>
-  `,
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [
     trigger('visibilityTransition', [
       state(
@@ -100,7 +81,10 @@ export class DialogComponent implements OnInit, OnDestroy {
     return this.visible ? 'active' : 'inactive';
   }
 
-  constructor(private element: ElementRef, private renderer2: Renderer2) {}
+  constructor(
+    private element: ElementRef,
+    private renderer2: Renderer2,
+  ) {}
 
   ngOnInit(): void {
     if (this.visible) this.show();

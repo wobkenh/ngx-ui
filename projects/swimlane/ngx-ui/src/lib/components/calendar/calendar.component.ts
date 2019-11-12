@@ -179,10 +179,7 @@ export class CalendarComponent implements OnInit, AfterViewInit, ControlValueAcc
 
   @Output() change = new EventEmitter<Date>();
 
-  get value(): Date {
-    return this._value;
-  }
-
+  get value(): Date { return this._value; }
   set value(val: Date) {
     const date = this.createMoment(val);
 
@@ -194,6 +191,9 @@ export class CalendarComponent implements OnInit, AfterViewInit, ControlValueAcc
 
       this.change.emit(this._value);
     }
+
+    this.cdr.markForCheck();
+    console.log('calendar changed!');
   }
 
   get current(): moment.Moment {
