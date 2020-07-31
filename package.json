@@ -43,7 +43,7 @@
     "@angular/platform-browser": "~9.1.2",
     "@angular/router": "~9.1.2",
     "angular-file-10-upload-something": "^2.0.0",
-    "@swimlane/ngx-datatable": "^17.1.0",
+    "ngx-datatable-10": "^18.0.0",
     "@types/json-schema": "^7.0.4",
     "ajv": "^6.5.5",
     "d3-color": "^1.2.3",
