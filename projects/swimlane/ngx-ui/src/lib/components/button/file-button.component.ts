@@ -13,9 +13,9 @@ import {
   ChangeDetectionStrategy
 } from '@angular/core';
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
-import { FileUploaderOptions, FileUploader, FileItem } from '@swimlane/ng2-file-upload';
 
 import { FileButtonStyleType } from './file-button-style.type';
+import { FileItem, FileUploader, FileUploaderOptions } from 'angular-file-10-upload-something';
 
 let nextId = 0;
 

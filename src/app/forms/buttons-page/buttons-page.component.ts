@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { FileUploader } from '@swimlane/ng2-file-upload';
+import { FileUploader } from 'angular-file-10-upload-something';
 
 @Component({
   selector: 'app-buttons-page',

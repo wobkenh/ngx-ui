@@ -2,13 +2,11 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
-import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 import { MomentModule } from 'ngx-moment';
 import { NgxUIModule } from '@swimlane/ngx-ui';
 
 import { HttpClientModule } from '@angular/common/http';
-import { FileUploadModule } from '@swimlane/ng2-file-upload';
 
 import { RouterModule, Routes } from '@angular/router';
 
@@ -59,6 +57,8 @@ import { ToolbarPageComponent } from './components/toolbar-page/toolbar-page.com
 import { TooltipPageComponent } from './dialogs/tooltip-page/tooltip-page.component';
 import { TreePageComponent } from './components/tree-page/tree-page.component';
 import { TypographyPageComponent } from './typography-page/typography-page.component';
+import { NgxDatatableModule } from 'ngx-datatable-10';
+import { FileUploadModule } from 'angular-file-10-upload-something';
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
